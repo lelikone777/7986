@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+    <title>mega-trade-03-v4</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html, body {
+        height: 100%;
+    }
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: #000000;
+    }
+    a {
+        color: inherit;
+    }
+    .wrap {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .header {
+        position: relative;
+        width: 100%;
+        margin-top: 23px;
+        z-index: 10;
+        /*margin-top: 6%;*/
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+        max-width: 375px;
+        margin: 0 auto;
+        width: 95%;
+    }
+    .logo {
+        margin-left: 24px;
+        max-width: 185px;
+        width: 90%;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .logo-flop {
+        width: 60%;
+        height: 100%;
+    }
+    .bobbles {
+        position: absolute;
+        right: 0;
+        max-width: 124px;
+        width: 33%;
+    }
+    .bobbles img {
+        width: 100%;
+    }
+    .bobbles-flop {
+        position: relative;
+    }
+    .age {
+        position: absolute;
+        top: 1rem;
+        right: 16px;
+        max-width: 39px;
+        width: 30%;
+    }
+    .age img {
+        width: 100%;
+    }
+    .main {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner {
+        position: absolute;
+        top: 100%;
+        transform: translate(-50%, calc(-100% + -20px));
+        left: 50%;
+        width: 100%;
+        max-width: 500px;
+    }
+    .banner img {
+        width: 100%;
+        position: relative;
+    }
+    .ttl {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        max-width: 240px;
+        transform: translate(-50%, -50%);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 41px;
+        text-align: center;
+        color: #F9F9F9;
+        z-index: 1;
+    }
+    .ttl span {
+        max-width: 240px;
+        display: block;
+        color: #731982;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 42px;
+        text-align: center;
+        transform: rotate(-4.36deg) skew(-8deg, 0deg);
+        background: rgba(255, 255, 255, 0.8);
+        padding: 3px 7px 6px;
+        margin: 0 auto 2px;
+    }
+    .ttl span:nth-child(2) {
+        width: 90%;
+    }
+    .ttl-text {
+        position: absolute;
+        left: 50%;
+        top: 38%;
+        transform: translate(-50%, -50%);
+        font-style: normal;
+        width: 250px;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 25px;
+        text-align: center;
+        color: #F9F9F9;
+        text-shadow: 0 3px 5px rgba(0, 0, 0, 0.45);
+        z-index: 1;
+    }
+    .ttl-price {
+        position: absolute;
+        top: 47%;
+        left: 50%;
+        margin: 0 auto;
+        width: 120px;
+        padding: 4px 6px;
+        background: #E6533F;
+        font-family: 'Inter',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        color: #FFFFFF;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+        z-index: 1;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 16px auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #ffffff;
+        text-decoration: none;
+        height: 8vh;
+        max-height: 50px;
+        min-height: 65px;
+        max-width: 249px;
+        background: #02B156;
+        border-radius: 32px;
+        text-align: center;
+    }
+    .foot {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        border-radius: 35px 0 0 0;
+    }
+    .foot-flop {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+    }
+    .foot-container {
+        margin: 0 auto;
+        padding: 15px 22px;
+        max-width: 360px;
+        width: 95%;
+    }
+    .price {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #434343;
+    }
+    .terms {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #333333;
+    }
+    .terms a {
+        text-decoration: underline;
+    }
+
+    @media (max-height: 500px) {
+        .ttl {
+            top: 35%;
+            max-width: none;
+        }
+        .ttl-text {
+            top: 50%;
+        }
+        .ttl-price {
+            top: 60%;
+        }
+    }
+
+    @media (max-height: 500px) and (orientation: portrait) {
+        .header {
+            margin-top: 6px;
+        }
+        .ttl {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .ttl-text {
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    @media (max-height: 600px) and (orientation: landscape) {
+        .banner {
+            display: none;
+        }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        .foot-container {
+            padding: 2px 22px;
+        }
+        .btn {
+            margin: 2px auto;
+        }
+        .ttl {
+            max-width: none;
+            width: 100%;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .ttl span {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .ttl-text {
+            font-size: 14px;
+            line-height: 18px;
+            top: 50%;
+        }
+    }
+
+    @media (max-width: 500px) and (max-height: 500px) and (orientation: landscape) {
+        .age {
+            top: 2rem;
+        }
+    }
+    @media (min-height: 700px) and (orientation: landscape) {
+        .banner {
+            max-width: 70vmin;
+        }
+    }
+</style>
+<body>
+
+    <div class="wrap">
+
+        <div class="age">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATkSURBVHgBzVlPbxpXEJ95a6dX8gm8jtRTUoWeLTcL+QAhTWz3ZnzrzVRqwVIPmBt1D7ZP7c1wa+NWgQ9Qs5ZcqbeAVFe9sd/AHFsIbzKzLM6yLH8WiMlPGpbdN2/fj3lv3psZEGZEysrEVtVqCkA9AYQ4EsT4selTcYjA4TYHQF92tGFX7KIDMwCjKAuxT9S9tCZ8hkyMACpKU0MD2R0wWn4SKevAXGHSBug4KXwC5OozaV0+v/ixBBEwNckdK7dPCg7ZOnUiLPxmF22IiBdWNmUo3OWvTFgXpiU7keRXbJEu0pl8n5Vc2Ds16teAGGtrTExaBmNJblvZXVB4iECnv14cncCCsZPMZviH7yOOf/9IktvJbB4I022a/EvnQc+qVAOk0quLo0KYjgFLJCj427lqfWZuVtmpTh4+2IhdN/+8hEkkxUHYwF/fBcFQouYXrWvnquFvH5hu1/SKatMs5g+B/tQHDaT8SkJQnGQZBAW/8LjiRKvebjKEreR36a2nuTfwEYB51MTz+/e3lkRQ+U4Xn8NHAOpigQDzcsLJvUtSrMgnSWNZ0xyEHBiEUJcjWO57lkS1i0SlUZ2IKMZiTmiPs1jj9KJArCkxgnsjHrWdyDVh9OB5eg8rRGef5YYGUVsE2e1k7kamfKWruhaQaoQMbvFFvMwc9RLWSfNFjjOHRU6LFov0kyBCiH6OiC2YFURVCQeV4nhQIdkhKkJQFu43LPaI1+x71+dM5oSlxJL29E2WFIwc37X2GYwBx6h1iVeVRjC7WtVDdKos6zL4mPe43sc6wf6XMBkmjJklgcSpTDSuFAGfMsbQmuSBM1NMlSMfIWt117vaMAcMDqR5b4zJ4qRJyt7UDDmOOAdL02s7YzlmeePdZ0J00z658fr6n8WCYwu/FZgPYukSyyFL2vdcpt8J6FrQW+d+xALPpI8d0IF5SdZY4iyn0PNyIS3Okmd5zZZJ8JKxPV257vn6HnukTgMkh7GTzDW/TH6/BmMQNt3exu3uiSH6I9t8Os1x7QJ3D2d+ipBahm7fh+gwvasT0uYEdGbCW3hrSlqs2M8bSqEF0eF411TIgn8W0AlD3ZORMEDFJW9fYUvaJAl+RMhaY3I29BxCPLrsNT2G95t4YUz/iRGXm69rrKqO7lRwzMkwgWjCRyTvibzLZvE7zayId/reLkHmS+vAgjng7YNm2F43C148zaa2EjnXsdxQTXWpymF7HuYAW83xZPaAwgeDuNJBWL4l+T+0S1Lbmdeai4JsPVI7OreLJbl3SVbskxYnYIV5rbkoSAlGSjqhjcEEaBmQvD8YhA+ktEYX96Q2I2U7WAJkmrlyl5G82/98gKTkvWLme5x/3zXRfmEiLO8fKrP841zVH65v3jeQjj9d26z+yyUQuCOCvEeUX138UAy2hxasrptX9l0RHSRYPAzTMUZ1FqKP1jeQFX569GADudr1FywYXvX4Z9JYOK8Vo9cn+7itHypotbnCsYgCwkvrWwvRcLe7DuHeXJVeP7aSB2kuIOS5R53L0+Xf/ziqQET0ycnBIfvytNXjSP8+9MlyrskVDzdWrPNgl12t6xz7OXwoOH09TurNVViNSRioAR+jG9JBXXEuLSecHCDTjhmZZB9uwV+BhaQtDqnWPNKmT8XhqKNFbrqL/D/Of5UoxPx4B0zw6m0C810qAAAAAElFTkSuQmCC" alt="">
+        </div>
+
+        <div class="main">
+
+            <div class="ttl">
+                <span>ИГРА</span>
+                <span>ДЛЯ</span>
+                <span>ТРЕЙДЕРОВ</span>
+            </div>
+            <div class="ttl-text">ЕЖЕДНЕВНЫЙ ПРИЗ</div>
+            <div class="ttl-price">10 000 ₽ </div>
+
+        </div>
+
+        <div class="foot">
+            <div class="foot-flop">
+                <div class="banner">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXEAAADdCAYAAABNLkKFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAThSURBVHgB7d1BktNGGEBhDQXny44bJIeCG2TH+VIVUk6xgZKG0ViS+7W/b+mCgoXn+Xerp3tZABjeh2+fv6++vgCQJeIAYSIOECbiAGEiDhAm4gBhLwsAQ9naTrj6ZxcAskQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAEu8OHb5+/LCUQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJEHCBMxAHCRBwgTMQBwkQcIEzEAcJeFgAOtefY2X//+Pvlnr9vEgcIE3GAMBEHCBNxgDARBwgTcYAwEQcIE3GAMBEHCBNxgDARBwgTcYAwEQcIE3GAMBEHCBNxgDARBwibMuJ7bsUAKDOJb/jnz798EADDE3GAMBEHCPu4xG2tf6+9vnarNEBZPuJH2Fr/Xnv909cvPgiAYVhOAQgTcYAwEQcIE3GAMBEHCBNxgDARBwgTcYAwEQcIE3GAMBEHCBNxgDcY9bIZEQcIE3GAMBEHCBNxgDARB6Y388XnbvYB+EXp2keTOECYiAOEiThAmIgDhHmwObHbQ5hHP3SBvfb8evva+3trJ8ra65++fsn/fJjE2TTztiyYhUkc4BdrE/6o32xN4gzNtwF4nYgDhIk4QJiIn8QyAHAFDzYnce9ZD2dsy7r93Rm2cMHITOIAYSbxAzzbLxcA4xDxZT2slgKu58MQ9rOcAhAm4gBhllOAqTzb8qiID8qaPIzlynNT9pzdYjkFIEzEAcIspwAc7MqjbIeMuBtpeuzxhsewnAIQZjllAKZY4L1M4gABW0vMIg4QJuIAYasRdysNQIMHm/zv3vMmHOfLyGZ+H1pO2SA+cBzf7s8j4gBhIg781tZF3DyeiAOEebB5AA/1gEcxiXMaH2JwPpM4cChnAV3LJA4QZhJnap5N7Le1E2Xtdef+P97DI+4NA/B+JnFgKFdebXals/7/1sQBwkQcIEzEAcJEHCBMxAHCRBwgzBZDpuHXvcfgQLhr5SM+655S5uH9yJlM4gMYdXK5+t83wbHFh+A2a+IwObfyzE3EAcI+zvgwyFeveVhKgddZE5+EB7zwnCynAISJOECYiMPgtp5bwY2In8QDOeAKIg4QJuIAYbYYDspyDO/h4vHnYxIHCDOJw0Acp8teJnGAMBGfmDVPmN8pEXf0JcA1TOIAYR5swoFs8eNqJnHgdHbSnMckDvzE2fQtJnGAMBEHCBNxgDARh1e4kIHRiThAmIgDhN29xfDeX26wnQng/UziAGEiDhAm4gBhIg4QJuIAYSIOECbiwG/Z8jsuR9HCD26ap8gkDhBmEmcaa9PxbYo2NTMzkzhAmIgDhIk4QJg1caZWWw+3rs9eIg4TcbTz8xlyOcUbDuBtrInD4Cyl8BoRh8n5Zjs3EQcIE3GAMLtT4Afb+ygScTiQLX4MYetIzre6vWkXmMC9Pws3fh44kzVxgDARB5iN5RSAJybiANf4D91ucmUxXXKxAAAAAElFTkSuQmCC" alt=""/>
+                </div>
+            </div>
+            <div class="foot-container">
+                <div class="price">15₽ в день</div>
+                <a href="#" class="btn">Играть</a>
+                <div class="terms">Услугу предоставляет ПАО «МегаФон»
+                    <a href="https://www.google.com/">Правила предоставления услуги</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
