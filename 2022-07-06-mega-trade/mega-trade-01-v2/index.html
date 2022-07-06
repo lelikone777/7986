@@ -241,6 +241,7 @@
             margin: 2px auto;
         }
         .ttl {
+            top: 28%;
             max-width: none;
             width: 100%;
             font-size: 20px;
@@ -249,16 +250,19 @@
         .ttl-text {
             font-size: 14px;
             line-height: 18px;
-            top: 35a%;
+            top: 35%;
         }
     }
 
-    @media (max-width: 500px) and (max-height: 500px) and (orientation: landscape) {
+    @media (max-width: 600px) and (max-height: 600px) and (orientation: landscape) {
         .age {
             top: 2rem;
         }
     }
-    @media (min-height: 700px) and (orientation: landscape) {
+    @media (min-height: 601px) and (orientation: landscape) {
+        .header-container {
+            max-width: 900px;
+        }
         .banner {
             max-width: 70vmin;
         }
@@ -290,7 +294,7 @@
         <div class="foot">
             <div class="foot-container">
                 <div class="price">15₽ в день</div>
-                <a href="#" class="btn">Сделать прогноз</a>
+                <a href="#" onclick="document.getElementById('ButtonSubmit').click();" class="btn">Продолжить</a>
                 <div class="terms">Услугу предоставляет ПАО «МегаФон»
                     <a href="https://www.google.com/">Правила предоставления услуги</a>
                 </div>
